@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>TeamPass</title>
+   <link href="bootstrap.min.css" rel="stylesheet">
+   <link href="invite.css" rel="stylesheet">
+   <script src="jquery.min.js"></script>
+   <script src="bootstrap.min.js"></script>
+   <link href="inviteicon.png">
+   <link href="myhead.jpg">
+   <link href="partner1.jpg">
+   <link href="partner2.jpg">
+</head>
+<body>
+
+  <!--rightbar-->
+     <div class="container">
+         <ul id="rightbar">
+             <li><button type="button" id="projectsettingposition" class="commonbuttonsettingover" data-toggle="modal" data-target="#projectsettingmodal"><small>项目设置</small></button></li>
+             <br />
+             <li><button type="button" class="img-rounded commonbuttonsettingmove commonbuttonsettingover" data-toggle="modal" data-target="#invitemodal"><img src="inviteicon.png" class="img-circle"  width="40px" height="40px"> </button></li>
+             <br />
+             <li><button type="button" class="img-rounded commonbuttonsettingmove commonbuttonsettingover" ><img src="myhead.jpg" class="img-circle" width="40px" height="40px"></button> </li>
+             <br />
+             <li><button type="button" class="img-rounded commonbuttonsettingmove commonbuttonsettingover"><img src="partner1.jpg" class="img-circle" width="40px" height="40px"></button> </li>
+             <br />
+             <li><button type="button" class="img-rounded commonbuttonsettingmove commonbuttonsettingover"><img src="partner2.jpg" class="img-circle" width="40px" height="40px"></button> </li>
+             <br />
+         </ul>
+     </div>
+
+
+  <!--invite modal-->
+     <div class="modal fade" id="invitemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+
+                  <!--modal header-->
+                  <div class="modal-header" id="invitemodalheader">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h2 class="modal-title">邀请成员加入</h2>
+                  </div>
+
+                  <!--modal body-->
+                  <div class="modal-body" >
+                      <label for="byemail" >通过邮箱添加新成员</label>
+                      <input type="text" id="byemail" class="form-control"  required autofocus>
+                      <br />
+                      <button type="button" class="btn btn-primary">确定</button>
+                      <br />
+                      <br />
+                      <label for="bylink">通过链接添加新成员</label>
+                      <input type="text" id="bylink" class="form-control"  required>
+                      <br />
+                      <button type="button" class="btn btn-primary">确定</button>
+                  </div>
+
+                  <!--modal footer-->
+                  <div class="modal-footer">
+                  </div>
+
+              </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+     </div><!-- /.modal -->
+
+     <!--project setting modal-->
+     <div class="modal fade" id="projectsettingmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+
+                  <!--modal header-->
+                  <div class="modal-header" id="invitemodalheader">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h2 class="modal-title">项目设置</h2>
+                  </div>
+
+                  <!--modal body-->
+                  <div class="modal-body" >
+                    <div role="tabpanel">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#projectinformation" aria-controls="projectinformation" role="tab" data-toggle="tab">项目信息</a></li>
+                        <li role="presentation"><a href="#advancedsetting" aria-controls="advancedsetting" role="tab" data-toggle="tab">高级设置</a></li>
+                      </ul>
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <!--projectinformation panel-->
+                        <div role="tabpanel" class="tab-pane active" id="projectinformation">
+                            <br />
+                          <label for="projectname" >项目名称</label>
+                          <input type="text" id="projectname" class="form-control">
+                          <br />
+                          <label for="projecttype" >项目类别</label>
+                          <div class="dropdown" id="projecttype">
+                            <button id="dLabel" class="form-control textalignstyle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              设计项目<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu form-control" role="menu" aria-labelledby="dLabel">
+                              <li>互联网项目</li>
+                              <li>教育项目</li>
+                              <li>媒体项目</li>
+                              <li>移动应用项目</li>
+                              <li>其他项目</li>
+                            </ul>
+                          </div>
+                            <br />
+                            <label for="projectbriefintro" >项目简介</label>
+                            <input type="text"  id="projectbriefintro" id="projectsettingprojectinformationprojectbriefintro" class="form-control">
+                            <br >
+                            <label for="projectprivacy">项目公开性</label>
+                            <div class="dropdown" id="projectprivacy">
+                                <button id="dLabel" class="form-control textalignstyle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    公开项目（所有人员可见）<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu form-control" role="menu" aria-labelledby="dLabel">
+                                    <li>私有项目（仅项目成员可见）</li>
+                                </ul>
+                            </div>
+                            <br />
+                            <button type="button" class="btn btn-primary btn-lg btn-block">保存</button>
+                        </div>
+
+                        <!--advancedsetting panel-->
+                        <div role="tabpanel" class="tab-pane" id="advancedsetting">
+                            <br />
+                            <button type="button" class="btn btn-primary btn-block">移交项目</button>
+                            <button type="button" class="btn btn-primary btn-block">暂停项目</button>
+                            <button type="button" class="btn btn-danger btn-block">删除项目</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--modal footer-->
+                  <div class="modal-footer">
+                  </div>
+              </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+     </div><!-- /.modal -->
+
+</body>
+</html>
