@@ -1,0 +1,31 @@
+body {
+    background-color:#eeeeee;
+}
+
+#rightbar{
+    list-style: none;
+    margin-top:70px;
+    position: absolute;
+    right: 5px;
+}
+#projectsettingposition{
+    position: relative;
+    right: 4px;
+    color: #31b0d5;
+}
+.commonbuttonsettingmove{
+    border-style: none;
+}
+.commonbuttonsettingover:hover{
+    background-color: #9d9d9d;
+}
+#invitemodalheader{
+    background-color:#31b0d5;
+}
+#projectsettingprojectinformationprojectbriefintro{
+    padding-bottom: 20%;
+    padding-top: 20%;
+}
+.textalignstyle{
+    text-align: left;
+}
