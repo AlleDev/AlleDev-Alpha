@@ -1,5 +1,3 @@
-# cloud-code
-This is an initaliation stage of Project cloud code
+# demos
 
-
-This is a test repo
+This is a pages demo repo of Project Alle Dev
