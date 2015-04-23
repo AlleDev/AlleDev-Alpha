@@ -1,0 +1,56 @@
+
+.img-responsiveAdapter{/*img-responsiveAdapter改编自img-responsive类，主要删除修改了hight*/
+    display:block;
+    max-width:100%;
+    width:100%;
+    height:180px;
+}
+.img-thumbnailAdapter{/*img-thumbnailAdater改编自img-thumbnail类，主要修改改了hight*/
+    display:inline-block;
+    max-width:100%;
+    width: 100%;
+    height:180px;
+    padding:4px;
+    line-height:1.42857143;
+    background-color:#fff;
+    border:1px solid #ddd;
+    border-radius:4px;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out
+}
+.commonbuttonsettingmove{
+    border-style: none;
+}
+.commonbuttonsettingover:hover{
+    background-color: #9d9d9d;
+}
+#imageset{
+    padding-left: 13px;
+    padding-right: 13px;
+}
+.listcommonstyle{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+#tabpagenavstyle{
+    padding-top: 5px;
+}
+#tabpagecontentstyle{
+    padding-top: 5px;
+}
+.namecolor{
+    color: dodgerblue;
+}
+.notificationtextcolor{
+    color: #888888;
+}
+.partnardescription{
+    font-family: Consolas;
+}
+.firstavatorpaddingtop{
+    padding-top: 6px;
+}
+#newteamtextcolor{
+    color: #888888;
+}

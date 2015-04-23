@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>code show</title>
+    <link href="bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="navbar.css" type="text/css" rel="stylesheet">
+    <link href="codeshow.css" type="text/css" rel="stylesheet">
+    <script src="bootstrap.min.js" type="text/javascript"></script>
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <link href="tomorrow-night-bright.css" type="text/css" rel="stylesheet">
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+<!--navbar-->
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Alle Dev</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">主页</a></li>
+                    <li><a href="#">项目</a></li>
+                    <li><a href="#">团队</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./">Omit <span class="sr-only">(current)</span></a></li>
+                    <li><a>Omit</a></li>
+                    <li><a>Omit</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+</div>
+<!--code show block-->
+<div class="container">
+    <div class="col-md-12 col-sm-12"><span class="namestyle">GeekWang</span></div>
+    <div class="col-md-12 col-sm-12">
+        <span class="fileandpathstyleall">
+            文件:<span class="fileandpathpart"> demos/WangProjectV1/InvitePartnerProject/</span>ComputeLoan.java
+        </span>
+    </div>
+
+    <div class="col-sm-12 col-md-12">
+
+        <pre>
+            <code>
+    说明：计算贷款
+//import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class ComputeLoan {
+	public static void main(String[] args){
+ //Scanner input=new Scanner(System.in);
+//提示
+ System.out.println("请输入1、年利率（如8.5）2、年数3、贷款总额");
+//输入
+ String annualInterestRateString=JOptionPane.showInputDialog("输入年利率，例如：8.2");   //GUI输入年利率
+ double annualInterestRate=Double.parseDouble(annualInterestRateString);           //将string类型转化为double类型
+ String numberOfYearsString=JOptionPane.showInputDialog("输入贷款年数：");              //GUI输入贷款年数
+ int numberOfYears=Integer.parseInt(numberOfYearsString);                              //将string类型转化为int类型
+ String loanAmountString=JOptionPane.showInputDialog("输入贷款总额：");                 //GUI输入贷款总额
+ double loanAmount=Double.parseDouble(loanAmountString);                           //将string类型转化为double类型
+
+ /*double annualInterestRate=input.nextDouble();       //定义变量并输入年度利率
+ int numberOfYears=input.nextInt();                  //定义变量并输入贷款年数
+ double loanAmount=input.nextDouble();               //定义变量并输入贷款额
+ */
+ //计算
+ double monthlyInterestRate=annualInterestRate/1200; //将年度利率转化成月度利率
+ double monthlyPayment=loanAmount*monthlyInterestRate/(1-1/(Math.pow(1+monthlyInterestRate,numberOfYears*12)) );  //计算月支付额
+ double totalPayment=monthlyPayment*12*numberOfYears;
+//输出
+ System.out.println("月支付:"+monthlyPayment);
+ System.out.println("总支付额:"+totalPayment);
+	}
+
+}
+            </code>
+        </pre>
+    </div>
+
+</div>
+
+
+
+
+</body>
+
+
+</html>
