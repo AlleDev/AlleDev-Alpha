@@ -48,5 +48,6 @@ build/Release
 node_modules
 
 app/public/stylesheets/style.css
-
 bower_components
+
+invitepartner.xml
