@@ -1,3 +1,13 @@
-# demos
+Alle Dev Demos
+=========
 
-This is a pages demo repo of Project Alle Dev
+## Requirements
+node.js running environment
+
+## Install dependency
+`npm install`
+
+## To Run
+`node ./bin/www` 
+
+Server should be running on port 3000
